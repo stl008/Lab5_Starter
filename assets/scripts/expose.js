@@ -3,7 +3,7 @@
 window.addEventListener('DOMContentLoaded', init);
 
 function init() {
-  const horn = document.querySelector("horn-select");
+  const horn = document.getElementById("horn-select");
   if(horn.value == "air-horn")
   {
     document.getElementById("expose").src = "air-horn.svg";
