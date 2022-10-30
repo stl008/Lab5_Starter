@@ -7,7 +7,7 @@ function init() {
   horn.addEventListener("change", (event) => {
     if(horn.value == "air-horn")
     {
-      document.querySelector("img").src = "images/air-horn.svg";
+      document.querySelector("img").src = "assets/images/air-horn.svg";
       document.getElementsByClassName("hidden")[0].src = "assets/audio/air-horn.mp3";
     }
     else if(horn.value == "car-horn")
@@ -17,7 +17,7 @@ function init() {
     }
     else if(horn.value == "party-horn")
     {
-      document.querySelectro("img").src = "assets/images/party-horn.svg";
+      document.querySelector("img").src = "assets/images/party-horn.svg";
       document.getElementsByClassName("hidden")[0].src = "assets/audio/party-horn.mp3";
     }
   });
