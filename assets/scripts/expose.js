@@ -3,7 +3,7 @@
 window.addEventListener('DOMContentLoaded', init);
 
 function init() {
-  let horn = document.querySelector("select");
+  const horn = document.querySelector("select");
   if(horn.value == "air-horn")
   {
     document.querySelector("img").src = "air-horn.svg";
@@ -20,18 +20,18 @@ function init() {
     document.getElementsByClassName("hidden")[0].src = "party-horn.mp3";
   }
 
-  let volume = document.getElementById("volume-controls");
-  if(volume.value == 0)
+  const vol = document.getElementById("volume-controls");
+  if(vol.value == 0)
   {
-    volume.src = "assets/icons/volume-level-0.svg";
+    vol.src = "assets/icons/volume-level-0.svg";
   }
-  else if(volume.value < 33)
+  else if(vol.value < 33)
   {
-    volume.src = "assets/icons/volume-level-1.svg";
+    vol.src = "assets/icons/volume-level-1.svg";
   }
-  else if (volume.value < 67)
+  else if (vol.value < 67)
   {
-    volume.src = "assets/icons/volume-level-2.svg";
+    vol.src = "assets/icons/volume-level-2.svg";
   }
   else
   {
