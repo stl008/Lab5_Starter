@@ -40,7 +40,7 @@ function init() {
     {
       document.getElementById("volume-controls").querySelector("img").src = "assets/icons/volume-level-3.svg";
     }
-    vol.volume = (vol.value)/100;
+    vol.volume = (parseFloat(vol.value))/100;
   });
  
   const button = document.querySelector("button");
