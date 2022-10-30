@@ -8,7 +8,7 @@ function init() {
     if(horn.value == "air-horn")
     {
       document.querySelector("img").src = "assets/images/air-horn.svg";
-      document.getElementsByClassName("hidden")[0].src = "assets/audio/air-horn.mp3";
+      document.getElementsByClassName("hidden").src = "assets/audio/air-horn.mp3";
     }
     else if(horn.value == "car-horn")
     {
