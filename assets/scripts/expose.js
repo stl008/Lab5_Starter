@@ -42,5 +42,9 @@ function init() {
     }
     vol.volume = (vol.value)/100;
   });
-  
+ 
+  const button = document.querySelector("button");
+  button.addEventListener("click", (event) => {
+    document.querySelector("audio").play();
+  }); 
 }
