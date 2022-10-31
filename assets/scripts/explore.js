@@ -5,7 +5,8 @@ window.addEventListener('DOMContentLoaded', init);
 function init() {
   const synth = windonw.speechSynthesis;
   const voiceSelect = document.querySelector("select");
-  let voices = synth.getVoices();
+  let voices = [];
+  voices = synth.getVoices();
   for(let i = 0; i < voices.length; i++) {
     const option = document.createElement("option");
     option.textContent = `${voices[i].name}(${voices[i].lang})`;
@@ -13,14 +14,17 @@ function init() {
     option.setAttribute("data-name", voices[i].name);
     voiceSelect.appendChild(option);
   }
-
-  voiceSelect.addEventListener("change", (event) => {
-    synth.voice = voiceSelect.name;
-  });
   
   const button = document.querySelector("button");
   button.addEventListener("click", (event) => {
     const utterThis = new SpeechSynthesisUtterance(document.getElementById("text-to-speak"));
+    const selectedOption = voiceSelect.selectedOptions[0].getAttribute("data-name");
+    for(let i = 0; i < voices.length; i++) {
+      if(voices[i].name === selectedOption) {
+        utterThis.voice = voices[i];
+      }
+    }
+
     synth.speak(utterThis);
     
     if(synth.speaking) {
