@@ -49,7 +49,7 @@ function init() {
     document.querySelector("audio").play();
     if(horn.value=="party-horn")
     {
-      jsConfetti.addConfetti();
+      jsConfetti.addConfetti({confettiRadius: 10});
       jsConfetti.clearCanvas();
     }
   }); 
