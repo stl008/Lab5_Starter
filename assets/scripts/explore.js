@@ -30,8 +30,8 @@ function init() {
     if(synth.speaking) {
       document.querySelector("img").src = "assets/images/smiling-open.png";
     }
-
-    if (synth.speaking == false) {
-      document.querySelector("img").src = "assets/images/smiling.png";
-    }
   });
+  while(synth.speaking == false) {
+    document.querySelector("img").src = "assets/images/smiling.png";
+  }
+}
