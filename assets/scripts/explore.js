@@ -31,7 +31,7 @@ function init() {
       document.querySelector("img").src = "assets/images/smiling-open.png";
     }
     
-    utterthis.addEventListener("end", (event) => {
+    utterThis.addEventListener("end", (event) => {
       document.querySelector("img").src = "assets/images/smiling.png";
     });
     
