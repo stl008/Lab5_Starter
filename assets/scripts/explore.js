@@ -17,7 +17,7 @@ function init() {
   
   const button = document.querySelector("button");
   button.addEventListener("click", (event) => {
-    const utterThis = new SpeechSynthesisUtterance(document.getElementById("text-to-speak"));
+    const utterThis = new SpeechSynthesisUtterance(document.getElementById("text-to-speak").value);
     const selectedOption = voiceSelect.selectedOptions[0].getAttribute("data-name");
     for(let i = 0; i < voices.length; i++) {
       if(voices[i].name === selectedOption) {
@@ -30,9 +30,8 @@ function init() {
     if(synth.speaking) {
       document.querySelector("img").src = "assets/images/smiling-open.png";
     }
-  });
 
-  if(synth.speaking == false) {
-    document.querySelector("img").src = "assets/images/smiling.png";
-  }
-}
+    if (synth.speaking == false) {
+      document.querySelector("img").src = "assets/images/smiling.png";
+    }
+  });
