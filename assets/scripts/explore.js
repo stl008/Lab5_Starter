@@ -31,10 +31,9 @@ function init() {
       document.querySelector("img").src = "assets/images/smiling-open.png";
     }
     
-    while(synth.speaking == false) {
+    utterthis.addEventListener("end", (event) => {
       document.querySelector("img").src = "assets/images/smiling.png";
-    }
-
+    });
     
   });
 }
