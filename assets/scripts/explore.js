@@ -3,7 +3,7 @@
 window.addEventListener('DOMContentLoaded', init);
 
 function init() {
-  const synth = windonw.speechSynthesis;
+  const synth = window.speechSynthesis;
   const voiceSelect = document.querySelector("select");
   let voices = [];
   voices = synth.getVoices();
