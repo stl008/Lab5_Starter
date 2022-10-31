@@ -43,12 +43,12 @@ function init() {
     document.querySelector("audio").volume = vol.value/100;
   });
  
+  const jsConfetti = new JSConfetti();
   const button = document.querySelector("button");
   button.addEventListener("click", (event) => {
     document.querySelector("audio").play();
     if(horn.value=="party-horn")
     {
-      const jsConfetti = new JSConfetti()
       jsConfetti.addConfetti();
       jsConfetti.clearCanvas();
     }
