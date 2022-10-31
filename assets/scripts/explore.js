@@ -31,7 +31,4 @@ function init() {
       document.querySelector("img").src = "assets/images/smiling-open.png";
     }
   });
-  while(synth.speaking == false) {
-    document.querySelector("img").src = "assets/images/smiling.png";
-  }
 }
