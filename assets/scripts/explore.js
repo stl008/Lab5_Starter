@@ -26,9 +26,13 @@ function init() {
     }
 
     synth.speak(utterThis);
-    
-    while(synth.speaking) {
+
+    if(synth.speaking) {
       document.querySelector("img").src = "assets/images/smiling-open.png";
+    }
+    
+    while(synth.speaking == false) {
+      document.querySelector("img").src = "assets/images/smiling.png";
     }
 
     
