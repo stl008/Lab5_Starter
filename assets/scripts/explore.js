@@ -27,10 +27,10 @@ function init() {
 
     synth.speak(utterThis);
     
-    if(synth.speaking) {
+    while(synth.speaking) {
       document.querySelector("img").src = "assets/images/smiling-open.png";
     }
 
-    document.querySelector("img").src = "assets/images/smiling.png";
+    
   });
 }
